@@ -1,0 +1,35 @@
+[
+    {
+        "source-name": "Local Backup",
+        "source": "local",
+        "destination-name": "This Computer",
+        "destination": "local:/backupDirectory",
+        "lock-file": "/home/nemes/.dont_backup_if_Im_here",
+        "directories": [
+            "/back/me/up",
+            "/and/me/too.txt"
+        ]
+    },
+    {
+        "source-name": "Local to Remote Backup",
+        "source": "local",
+        "destination-name": "Some Other Computer",
+        "destination": "ssh_name:/backupDirectory",
+        "lock-file": "/home/nemes/.dont_backup_if_Im_here",
+        "directories": [
+            "/back/me/up",
+            "/and/me/too.txt"
+        ]
+    },
+    {
+        "source-name": "Remote to Remote Backup",
+        "source": "remote:ssh_name_of_a_computer",
+        "destination-name": "A Server far far away",
+        "destination": "ssh_of_server_that_the_remote_source_has_in_their_ssh_config:/backupDirectory",
+        "lock-file": "/bleh/.dont_backup_if_Im_here",
+        "directories": [
+            "/back/me/up",
+            "/and/me/too.txt"
+        ]
+    }
+]
