@@ -81,6 +81,7 @@ def is_available(source, destination, lockfile):
 def run_backup(borg, snapshot_name, source, destination, directories, destination_dir):
     if borg:
         dirlist = " ".join(directories)
+        snapshot_name += datetime.datetime.now().strftime("_%Y-%m-%d_%H:%M:%S")
     else:
         dirlist = " --include ".join(directories)
     cmd = ""
